@@ -1,4 +1,3 @@
-#### simple-angular-threejs
 
 ##### generate a new project
 ```
@@ -15,12 +14,12 @@ npm install --save three
 npm install --save-dev @types/three
 ```
 
-##### import threejs : app.component.ts
+##### import threejs : `app.component.ts - top line`
 ```
 import * as THREE from 'three';
 ```
 
-##### get element
+##### get element : `app.component.ts - html division`
 ```ts
 private container : HTMLElement;
 
@@ -31,7 +30,7 @@ this.container = this.elementRef.nativeElement;
 
 ```
 
-##### screen initialize
+##### screen initialize : `app.component.ts - init()`
 ```ts
 private scene: THREE.Scene;
 private camera: THREE.PerspectiveCamera;
@@ -46,7 +45,7 @@ this.container.appendChild(this.renderer.domElement);
 
 ```
 
-##### animate loop
+##### animate loop : `app.component.ts - render()`
 ```ts
 this.render();
 
