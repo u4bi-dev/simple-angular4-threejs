@@ -47,6 +47,24 @@ export class AppComponent implements OnInit{
     this.renderer.setSize(screen.width, screen.height);
     this.container.appendChild(this.renderer.domElement);
 
+    this.render();
+  }
+
+  render(){
+
+    let self: AppComponent = this;
+    
+    (function render(){
+      requestAnimationFrame(render);
+      self.renderer.render(self.scene, self.camera);
+
+      self.animate();
+    }());
+    
+  }
+
+  animate(){
+    console.log('animate');
   }
 
 }
